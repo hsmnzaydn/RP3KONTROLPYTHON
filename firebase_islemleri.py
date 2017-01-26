@@ -20,7 +20,7 @@ while sayac==1:#Sürekli databaseden veri çekmek için kullanıyoruz
         mp3durum=firebase.get('/kontroller','mp3_durum')#Burada kontroller sekmesinin altındaki mp3_kontrol verisini çekiyoruz her seferinde
         print('Mp3 kontrol:',result2,'Mp3 durum',mp3durum)#Ve güncel durumun çıktısını alıyoruz
         if result2=='on' and sayac_mp3==0:
-            mp3cal.baslat()
+            mp3cal.baslat("baslat")
             sayac_mp3 = 1
         if result2=='off' and sayac_mp3==1:
             mp3cal.durdur()
@@ -34,6 +34,9 @@ while sayac==1:#Sürekli databaseden veri çekmek için kullanıyoruz
         if mp3durum=="unpause" and sondurum=="pause":
             mp3cal.unpause()
             sondurum="null"
+        mp3cal.devamediyormu()
+
+
     except ValueError:
         print("Hata")
 
