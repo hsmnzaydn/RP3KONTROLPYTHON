@@ -17,7 +17,7 @@ while sayac==1:
     try:
         result2 = firebase.get('/kontroller', 'mp3_kontrol')
         mp3durum=firebase.get('/kontroller','mp3_durum')
-        print('Mp3 kontrol:',result2,'Mp3 duru',mp3durum)
+        print('Mp3 kontrol:',result2,'Mp3 durum',mp3durum)
         if result2=='on' and sayac_mp3==0:
             mp3cal.baslat("baslat")
             sayac_mp3 = 1

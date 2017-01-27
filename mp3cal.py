@@ -2,7 +2,7 @@ import pygame
 
 
 globvar = 1
-array=["/home/dvcc/PycharmProjects/firebase/untitled.mp3","/home/dvcc/PycharmProjects/firebase/untitled.mp3"]
+array=["robo.mp3","robo.mp3"]
 def baslat(icerik):
     pygame.init()
     if icerik=="baslat":
@@ -16,7 +16,7 @@ def durdur():
     print("durduruldu")
 def pause():
     pygame.mixer.music.pause()
-    print("pause edild")
+    print("pause edildi")
 def unpause():
     pygame.mixer.music.unpause()
     print("devam ettiriliyor")
