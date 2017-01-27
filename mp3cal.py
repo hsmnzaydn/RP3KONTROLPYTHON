@@ -27,6 +27,8 @@ def devamediyormu(result2):
         print("Yeni muzik başladı")
         baslat(array[globvar])
         globvar += 1
+        if(globvar==len(array)):
+            globvar=0
 
 
 
