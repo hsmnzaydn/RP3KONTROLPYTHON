@@ -1,8 +1,8 @@
 import pygame
 
-globvar = 1
 
-array=["/home/dvcc/PycharmProjects/firebase/can.mp3","/home/dvcc/PycharmProjects/firebase/robo.mp3"]
+globvar = 1
+array=["/home/dvcc/PycharmProjects/firebase/untitled.mp3","/home/dvcc/PycharmProjects/firebase/untitled.mp3"]
 def baslat(icerik):
     pygame.init()
     if icerik=="baslat":
@@ -21,12 +21,15 @@ def unpause():
     pygame.mixer.music.unpause()
     print("devam ettiriliyor")
 
-def devamediyormu():
+def devamediyormu(result2):
     global globvar
-    if pygame.mixer.music.get_busy()==False:
+    if result2 == "on" and pygame.mixer.music.get_busy() == False and globvar < len(array):
+        print("Yeni muzik başladı")
         baslat(array[globvar])
         globvar += 1
-    if pygame.mixer.music.get_busy()==True:
-        print("Devam ediyor")
+
+
+
+
 
 
