@@ -16,7 +16,7 @@ def durdur():
     print("durduruldu")
 def pause():
     pygame.mixer.music.pause()
-    print("pause edildi")
+    print("pause edild")
 def unpause():
     pygame.mixer.music.unpause()
     print("devam ettiriliyor")
